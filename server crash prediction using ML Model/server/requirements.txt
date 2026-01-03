@@ -1,8 +1,7 @@
 flask
 flask-cors
-tensorflow
-numpy
-scikit-learn
-joblib
-h5py
 psutil
+numpy
+pandas
+scikit-learn
+
