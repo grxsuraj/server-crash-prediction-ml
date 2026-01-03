@@ -1,49 +1,50 @@
-﻿# ServerPulse - Server Monitoring & Failure Prediction
+# ServerPulse – Server Monitoring & Failure Prediction
 
 <div align="center">
   <img src="./images/serverpulse.png" alt="ServerPulse Logo" width="550px" />
 </div>
 
+---
 
 ## Overview
+ServerPulse is a comprehensive real-time server monitoring solution that combines live system metrics tracking with advanced failure prediction using **LSTM neural networks**.  
+The application helps system administrators proactively manage server infrastructure by identifying potential failures before they occur.
 
-ServerPulse is a comprehensive real-time server monitoring solution that combines real-time system metrics tracking with advanced failure prediction using LSTM neural networks. This application helps system administrators proactively manage server infrastructure by identifying potential failures before they occur.
+---
 
 ## Features
-
-- **Real-time Monitoring**: Track CPU, memory, disk usage, network activity, and other system metrics in real-time
+- **Real-time Monitoring**: Track CPU, memory, disk usage, network activity, and other system metrics
 - **Predictive Analytics**: ML-powered failure prediction using LSTM neural networks
 - **Interactive Dashboard**: Modern React-based UI with responsive charts and metrics visualization
 - **Trend Analysis**: Historical data tracking to identify patterns and anomalies
 - **Alert System**: Visual warnings when metrics exceed normal thresholds
 - **Responsive Design**: Works on desktop and mobile devices
 
-<!-- Add a screenshot of your main dashboard here -->
+---
 
-<img width="1780" height="653" alt="Screenshot 2025-07-14 235813" src="https://github.com/user-attachments/assets/03a560f5-89d4-42ca-bbf6-5e4681e3fc46" />
-<img width="1799" height="746" alt="Screenshot 2025-07-14 235822" src="https://github.com/user-attachments/assets/3e32bad4-e5b7-47ca-8c18-00bf4da5195a" />
+## Application Screenshots
 
+<img width="1780" height="653" alt="Dashboard" src="https://github.com/user-attachments/assets/03a560f5-89d4-42ca-bbf6-5e4681e3fc46" />
+<img width="1799" height="746" alt="Analytics" src="https://github.com/user-attachments/assets/3e32bad4-e5b7-47ca-8c18-00bf4da5195a" />
 
-
-
-
+---
 
 ## System Architecture
-
 The application consists of three main components:
 
-1. **React Frontend**: Modern UI built with React, Vite, and TailwindCSS
-2. **Flask Backend Server**: API endpoints for fetching and processing system data
-3. **LSTM AI Model**: Neural network for predicting potential system failures
+1. **React Frontend** – Built using React, Vite, and TailwindCSS  
+2. **Flask Backend Server** – REST APIs for data handling and prediction  
+3. **LSTM AI Model** – Neural network for predicting potential system failures  
 
-<!-- Add a system architecture diagram here -->
+---
 
 ## Technology Stack
-
 - **Frontend**: React, Vite, TailwindCSS, Chart.js
-- **Backend**: Flask, Python
-- **AI/ML**: TensorFlow, LSTM neural networks
-- **Data Collection**: psutil, custom system metrics collection
+- **Backend**: Python, Flask
+- **AI / ML**: TensorFlow, LSTM Neural Networks
+- **Data Collection**: psutil, custom system metrics
+
+---
 
 ## Installation and Setup
 
@@ -52,112 +53,66 @@ The application consists of three main components:
 - Node.js 14+
 - npm or yarn
 
-### Setting Up the Project
+## Backend setup
+cd server
+python -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sujal-pawar/ChaloWallmart.git
-   cd ChaloWallmart
-   ```
+## Frontend setup
+cd ../client
+npm install
+npm run dev
 
-2. **Set up the backend**
-   ```bash
-   # Navigate to the server directory
-   cd server
-   
-   # Create and activate virtual environment
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   
-   # Install dependencies
-   pip install -r requirements.txt
-   
-   # Start the server
-   python app.py
-   ```
+## Access the Application
 
-3. **Set up the frontend**
-   ```bash
-   # Navigate to the client directory
-   cd ../client
-   
-   # Install dependencies
-   npm install
-   
-   # Start the development server
-   npm run dev
-   ```
+Frontend: http://localhost:5173
 
-4. **Access the application**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5001
+Backend API: http://localhost:5001
 
 ## Using the Application
+## Dashboard Navigation
 
-### Dashboard Navigation
+Status: View overall system health and stability probability
 
-- **Status**: View overall system health and stability probability
-- **Parameters**: Monitor individual system metrics and their trends
-- **Graphs**: Visualize historical data with interactive charts
-- **Analytics**: Access predictive insights and recommendations
+Parameters: Monitor individual system metrics and trends
 
-<img width="1900" height="775" alt="Screenshot 2025-07-14 235800" src="https://github.com/user-attachments/assets/95c0ba6b-e452-4887-b3be-6661276fc3fd" />
+Graphs: Visualize historical data
 
-<!-- Add a screenshot of your parameter grid here -->
+Analytics: Predictive insights and recommendations
 
-### Understanding the Prediction System
-
-The LSTM neural network analyzes patterns in system metrics to predict potential failures before they occur. The prediction is presented as:
-
-- **Probability**: Likelihood of a system failure
-- **Reason**: Key metrics contributing to the prediction
-- **Recommendations**: Suggested actions to prevent failure
-
-<img width="1879" height="775" alt="Screenshot 2025-07-14 235833" src="https://github.com/user-attachments/assets/81bd1319-efdb-4d53-a9d9-22d1aa4d3900" />
-<!-- Add a screenshot of your prediction screen here -->
-
-## Development and Integration
-
-### Training Custom Models
-
-1. Navigate to the `ai-model/training` directory
-2. Modify `train_model.py` as needed for your specific use case
-3. Run training:
-   ```bash
-   python train_model.py
-   ```
-4. The new model will be saved to the `ai-model/models` directory
-
-### API Endpoints
-
-- `GET /live-sequence`: Get current system metrics
-- `POST /predict`: Send system data and receive failure prediction
-- `GET /`: API health check
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributors
+<img width="1900" height="775" alt="Graphs" src="https://github.com/user-attachments/assets/95c0ba6b-e452-4887-b3be-6661276fc3fd" />
 
 
-- [Harshil Bohra](https://github.com/prof7turtle) 
-- [Atharva Kuratkar](https://github.com/AtharvA89)
-- [Vishal Tamhane](https://github.com/vishal-tamhane)
-- [Sujal Pawar](https://github.com/sujal-pawar)
+## Understanding the Prediction System
 
-## Acknowledgments
+The LSTM neural network analyzes time-based patterns in system metrics to predict failures.
 
-- Walmart Sparkathon Hackathon Team
-- TensorFlow for machine learning framework
-- React and Flask communities for excellent documentation
+Prediction output includes:
 
----
+Probability: Likelihood of failure
 
-*This project was developed as part of the Walmart Sparkathon Hackathon 2025.*
+Reason: Key contributing metrics
 
-## Legal Notice
-This project was created with dedication by Team ServerPulse for Walmart Sparkathon Hackathon 2025. All rights reserved.
+Recommendations: Preventive actions
 
-Any unauthorized use, copying, modification, distribution, or piracy of this project or its content is strictly prohibited. Violators will be subject to legal action.
-© Team ServerPulse, 2025
+<img width="1879" height="775" alt="Prediction" src="https://github.com/user-attachments/assets/81bd1319-efdb-4d53-a9d9-22d1aa4d3900" />
+
+Development and Integration
+Training Custom Models
+cd ai-model/training
+python train_model.py
+
+
+The trained model is saved in ai-model/models.
+
+## Project Type
+
+Academic Group Project – Personal GitHub Implementation
+
+## Author
+
+Suraj Pathan
+Artificial Intelligence & Data Science
+GitHub: https://github.com/grxsuraj
