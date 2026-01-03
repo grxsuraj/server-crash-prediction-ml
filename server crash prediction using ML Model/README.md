@@ -55,9 +55,13 @@ The application consists of three main components:
 
 ## Backend setup
 cd server
+
 python -m venv venv
+
 source venv/bin/activate      # Windows: venv\Scripts\activate
+
 pip install -r requirements.txt
+
 python app.py
 
 ## Frontend setup
