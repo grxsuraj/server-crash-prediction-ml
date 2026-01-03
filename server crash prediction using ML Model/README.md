@@ -114,5 +114,7 @@ Academic Group Project – Personal GitHub Implementation
 ## Author
 
 Suraj Pathan
+
 Artificial Intelligence & Data Science
+
 GitHub: https://github.com/grxsuraj
