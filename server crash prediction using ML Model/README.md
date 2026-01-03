@@ -69,6 +69,17 @@ cd ../client
 npm install
 npm run dev
 
+## Live Demo
+
+Frontend: https://server-crash-prediction-ml-tqw3.vercel.app  
+Backend: https://server-crash-prediction-ml.onrender.com  
+
+⚠️ Note:
+Due to free-tier cloud limitations, the deployed backend runs in demo mode.
+The ML (LSTM) model is disabled in production, but the full ML pipeline is
+implemented and works locally.
+
+
 ## Access the Application
 
 Frontend: http://localhost:5173
